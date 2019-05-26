@@ -1,0 +1,17 @@
+How to use:
+
+You will need:
+    Chromedriver -> http://chromedriver.chromium.org/
+    Splinter -> https://splinter.readthedocs.io/en/latest/#
+    Python -> https://www.python.org/
+
+1) Compile the CSV file "MonthlyCSV.csv" (Excel is strongly recommended) adding:
+     a)Codice and Fase Commessa (Nome commessa could be used for your personal note.)
+     c)Days of the month
+     b)Hours you need to add in navision
+   
+
+2) Run the auto.py script file->  Python.exe auto.py <NavisionUsername> <NavisionPassword> <CSVFile>
+
+
+Feel free to make your contribution! 
