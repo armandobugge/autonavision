@@ -63,7 +63,7 @@ def openBozzaReport(browser):
 
 browser = Browser('chrome')
 navisionLogin(browser)
-openBozzaReport(browser)
+newReport(browser)
 
 f=open(sys.arg[2], "r")
 fl =f.readlines()
