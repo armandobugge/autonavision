@@ -38,8 +38,8 @@ def insertNavRecord(browser,date,codiceCommessa,faseCommessa,hour ):
 
 def navisionLogin(browser):
     browser.visit('https://navisionweb.lutech.it')
-    browser.find_by_id('UserName').fill(sys.arg[0])
-    browser.find_by_id('Password').fill(sys.arg[1])
+    browser.find_by_id('UserName').fill(user)
+    browser.find_by_id('Password').fill(password)
     browser.find_by_id('btnLogin').click()
     return;
 
@@ -61,11 +61,13 @@ def openBozzaReport(browser):
     return;  
 
 
+scriptName, user, password, csv = sys.argv
+
 browser = Browser('chrome')
 navisionLogin(browser)
 newReport(browser)
 
-f=open(sys.arg[2], "r")
+f=open(csv, "r")
 fl =f.readlines()
 records = list()
 listaDate = list()
