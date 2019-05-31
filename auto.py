@@ -66,6 +66,7 @@ scriptName, user, password, csv = sys.argv
 browser = Browser('chrome')
 navisionLogin(browser)
 newReport(browser)
+#openBozzaReport(browser)
 
 f=open(csv, "r")
 fl =f.readlines()
@@ -80,7 +81,7 @@ for x in fl:
                 if k != '' and k != '\n' and k!= 'DATE' and k!='END':
                     listaDate.append(k)
         if y[0]=='COMMESSA':
-            for j in range(4,y.index('END\n')-1):
+            for j in range(4,y.index('END\n')):
                 record = list()
                 record.append(listaDate[j-4])
                 record.append(y[2])
