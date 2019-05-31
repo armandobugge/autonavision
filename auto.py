@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from splinter import Browser
 import time,sys
 
